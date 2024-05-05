@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #32ACF1 linear-gradient(to bottom right, #32ACF1 0%, #6039FF 100%);
+    font: 14px "Avenir Next", Helvetica, Arial, sans-serif;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#mess-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+.bubble{
+    margin-top: 44px;
+    height: 208.417px;
+    width: 84%;
+    max-width: 640px;
+    /* padding: 16px 16px 12px; */
+    font-size: 16px;
+    background-color: white;
+    border-radius: 32px 32px 32px 32px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    
+}
+.anon{
+    margin: 12px 0;
+    font-weight: 500;
+    color: white;
+
+}
+.title-cont {
+    padding: 16px 16px 12px;
+    font-size: 16px;
+    border-radius: 32px 32px 0 0;
+    display: flex;
+    justify-content: left;
+}
+.profile-img {
+    border-radius: 300px;
+    width: 40px;
+    height: 40px;
+    background-color: #F1F1F1;
+    background-image: url('/images/default_avatar.png');
+    background-position: center center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    display: block;
+}
+.user-info {
+    margin-left: 12px;
+    font-size: 14px;
+}
+.username {
+    font-weight: 500;
+    font-size: 14px;
+}
+.prompt {
+    font-weight: bold;
+    font-size: 14px;
+}
+.message {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #87c6f8, #93a7fc);
+    backdrop-filter: blur(24px);
+    border-radius: 0 0 24px 24px;
+    position: relative;
+
+}
+.dice {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 8px;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#question {
+    width: 100%;
+    padding: 18px 24px 18px 24px;
+    height: 140px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    overflow: auto;
+    line-height: 1.15;
+    
+}
+::placeholder {
+    opacity: 0.1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    opacity: 0.1;
+  }
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84%;
+    background-color: black;
+    border-radius: 100px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    height: 60px;
+    box-sizing: border-box;
+    cursor: pointer;
+    max-width: 640px;
+}
+.hidden {
+    display: none;
+}
+.bottom_cont {
+    bottom: calc(env(safe-area-inset-bottom) + 100px);
+  position: absolute;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 35px;
+  padding-top: 32px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.last_btn_a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    border-radius: 100px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    height: 60px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0 12vw;
+}
+.rand_user_h2 {
+    font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+    margin-bottom: 20px;
+}
+.pulse {
+    animation: animate-shake 2s ease-in-out infinite;
+}
+
+@keyframes animate-shake {
+    0%, 10%, 65%, 100% {
+        transform: rotate(0deg) scale(1.0);
+      }
+      30%, 40% {
+        transform: rotate(-1deg) scale(1.05);
+      }
+      35%, 45% {
+        transform: rotate(1deg) scale(1.05);
+      }
+}
+
+@media screen and (min-width: 640px) {
+    /* Adjust button width when device width is at least 641px */
+    .submit {
+
+        width: 50%;
+    }
+}
